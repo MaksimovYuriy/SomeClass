@@ -10,7 +10,15 @@ namespace SomeClass
     {
         static void Main(string[] args)
         {
+            //Создадим нового студента
             Student p = new Student(1, "Name", 1, 10);
+            //Вывод информации о нем
+            p.getInfo();
+
+            //Изменим несколько параметров у студента и снова выведем
+            p.FacultyID = 2;
+            p.Group = 3;
+            p.getInfo();
         }
 
     }
@@ -32,10 +40,11 @@ namespace SomeClass
 
         public void getInfo()
         {
-            Console.WriteLine("ID студента: ", this.Id);
-            Console.WriteLine("Имя студента: ", this.Name);
-            Console.WriteLine("ID факультета: ", this.FacultyID);
-            Console.WriteLine("Группа студента: ", this.Group);
+            Console.WriteLine("ID студента: {0}", this.Id);
+            Console.WriteLine("Имя студента: {0}", this.Name);
+            Console.WriteLine("ID факультета: {0}", this.FacultyID);
+            Console.WriteLine("Группа студента: {0}", this.Group);
+            Console.WriteLine();
         }
     }
 }
