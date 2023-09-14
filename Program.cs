@@ -10,7 +10,7 @@ namespace SomeClass
     {
         static void Main(string[] args)
         {
-
+            Student p = new Student(1, "Name", 1, 10);
         }
 
     }
@@ -28,6 +28,14 @@ namespace SomeClass
             this.Name = name;
             this.FacultyID = facultyID;
             this.Group = group;
+        }
+
+        public void getInfo()
+        {
+            Console.WriteLine("ID студента: ", this.Id);
+            Console.WriteLine("Имя студента: ", this.Name);
+            Console.WriteLine("ID факультета: ", this.FacultyID);
+            Console.WriteLine("Группа студента: ", this.Group);
         }
     }
 }
